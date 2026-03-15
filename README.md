@@ -12,6 +12,27 @@ A memory server where every piece of knowledge is a readable `.md` file you can 
 
 ---
 
+## TL;DR
+
+```bash
+pip install seeking-context && seeking-context
+```
+
+**One command. Zero config. Unlimited context.**
+
+| What | Why It Matters |
+|------|----------------|
+| 🪶 **Lightweight** | No API keys, no external DBs, pure Python with built-in embeddings |
+| 📄 **Markdown = Truth** | Every memory is a `.md` file — grep it, git-track it, edit by hand |
+| 🔄 **Cross-Agent Persistence** | Namespace isolation lets Claude Code, openclaw, and more share one instance |
+| 🔌 **Multi-Protocol** | MCP (stdio/SSE), REST API, Python SDK — pick your interface |
+| 🧩 **Native Integrations** | One-line setup for Claude Code, openclaw, OpenViking, less-agent |
+| ⚡ **Zero Config** | Install and run. Sensible defaults work out-of-the-box |
+
+**Key guarantee**: Delete the index, run `seeking-context rebuild`, everything restores from `.md` files. Your memories are truly yours.
+
+---
+
 ## Why SeekingContext?
 
 Most agent memory systems lock your data inside opaque binary databases. You can't read them, can't grep them, can't track changes in git, can't fix a bad memory with a text editor.
@@ -36,6 +57,34 @@ SeekingContext takes a different approach: **your memories are just markdown fil
 ```
 
 **Delete `chroma/` and `metadata.db`. Run `seeking-context rebuild`. Everything comes back.** That's the guarantee.
+
+---
+
+## Zero Configuration Required
+
+**TL;DR: Install and run. That's it.**
+
+SeekingContext works out-of-the-box with sensible defaults:
+
+- ✅ **No API keys needed** - Uses built-in `all-MiniLM-L6-v2` embedding model
+- ✅ **No database setup** - SQLite + ChromaDB auto-initialized
+- ✅ **No configuration files** - All defaults work immediately
+- ✅ **One-line install** - `pip install seeking-context`
+- ✅ **One-line run** - `seeking-context` or `seeking-context-api`
+
+**Quick Start:**
+```bash
+# Install
+pip install seeking-context
+
+# Run MCP server
+seeking-context
+
+# Or run REST API
+seeking-context-api
+```
+
+That's literally all you need to get started. Configuration is optional - only customize if you have specific requirements.
 
 ---
 

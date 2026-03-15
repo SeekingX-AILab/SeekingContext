@@ -12,6 +12,27 @@
 
 ---
 
+## TL;DR
+
+```bash
+pip install seeking-context && seeking-context
+```
+
+**一行命令，零配置，无限上下文。**
+
+| 特性 | 核心价值 |
+|------|----------|
+| 🪶 **轻量设计** | 无需 API Key、无需外部数据库，纯 Python + 内置嵌入模型 |
+| 📄 **Markdown 即真相** | 每条记忆都是 `.md` 文件 —— 可 grep、可 git 追踪、可手动编辑 |
+| 🔄 **跨 Agent 持久化** | 命名空间隔离，Claude Code、openclaw 等多框架共享同一实例 |
+| 🔌 **多协议支持** | MCP (stdio/SSE)、REST API、Python SDK —— 任选接口 |
+| 🧩 **原生集成** | 一键配置 Claude Code、openclaw、OpenViking、less-agent |
+| ⚡ **零配置启动** | 装上即用，所有默认值开箱可用 |
+
+**核心承诺**：删掉索引，运行 `seeking-context rebuild`，一切从 `.md` 文件恢复。你的记忆真正属于你。
+
+---
+
 ## 为什么选择 SeekingContext？
 
 大多数 Agent 记忆系统把数据锁在不透明的二进制数据库里。你看不了、搜不了、不能用 git 跟踪变更、不能用编辑器修一条坏记忆。
@@ -36,6 +57,34 @@ SeekingContext 走了一条不同的路：**你的记忆就是 Markdown 文件**
 ```
 
 **删掉 `chroma/` 和 `metadata.db`，运行 `seeking-context rebuild`，一切恢复如初。** 这就是我们的承诺。
+
+---
+
+## 零配置启动
+
+**一句话：装上就能用，无需任何配置。**
+
+SeekingContext 开箱即用，所有默认值都经过精心设计：
+
+- ✅ **无需 API 密钥** - 内置 `all-MiniLM-L6-v2` 嵌入模型
+- ✅ **无需数据库配置** - SQLite + ChromaDB 自动初始化
+- ✅ **无需配置文件** - 所有默认值开箱即用
+- ✅ **一行安装** - `pip install seeking-context`
+- ✅ **一行启动** - `seeking-context` 或 `seeking-context-api`
+
+**快速启动：**
+```bash
+# 安装
+pip install seeking-context
+
+# 启动 MCP 服务器
+seeking-context
+
+# 或启动 REST API
+seeking-context-api
+```
+
+真的就这么简单。配置是可选的——只有当你有特殊需求时才需要调整。
 
 ---
 
