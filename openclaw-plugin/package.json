@@ -1,0 +1,42 @@
+{
+  "name": "@seeking-context/openclaw",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "SeekingContext memory plugin for OpenClaw — hybrid vector + keyword search with namespace isolation",
+  "license": "Apache-2.0",
+  "author": "finny",
+  "keywords": [
+    "openclaw",
+    "openclaw-plugin",
+    "memory",
+    "agent-memory",
+    "vector-search",
+    "seeking-context"
+  ],
+  "files": [
+    "*.ts",
+    "openclaw.plugin.json",
+    "README.md"
+  ],
+  "main": "./index.ts",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.1.26"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

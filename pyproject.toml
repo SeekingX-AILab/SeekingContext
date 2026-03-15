@@ -1,0 +1,37 @@
+[project]
+name = "seeking-context"
+version = "0.1.0"
+description = "Universal Memory MCP Server for AI agents"
+readme = "README.md"
+authors = [
+    { name = "finny", email = "finnywang@tencent.com" },
+]
+requires-python = ">=3.12"
+dependencies = [
+    "mcp[cli]>=1.0.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "chromadb>=0.5.0",
+    "aiosqlite>=0.20.0",
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "typer>=0.12.0",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+seeking-context = "seeking_context.server:main"
+seeking-context-api = "seeking_context.api:main"
+seeking-context-all = "seeking_context.server:main_all"
+seeking-context-cli = "seeking_context.cli:app"
+
+[build-system]
+requires = ["uv_build>=0.8.8,<0.9.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+    "httpx>=0.27.0",
+]

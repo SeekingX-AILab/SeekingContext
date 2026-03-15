@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "seeking-context": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/Users/finnywang/codebase/SeekingContext",
+        "run",
+        "seeking-context"
+      ]
+    }
+  }
+}

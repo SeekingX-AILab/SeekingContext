@@ -1,0 +1,7 @@
+Resolved 94 packages in 856ms
+   Building seeking-context @ file:///Users/finnywang/codebase/SeekingContext
+      Built seeking-context @ file:///Users/finnywang/codebase/SeekingContext
+Prepared 1 package in 7ms
+Uninstalled 1 package in 2ms
+Installed 1 package in 5ms
+ ~ seeking-context==0.1.0 (from file:///Users/finnywang/codebase/SeekingContext)

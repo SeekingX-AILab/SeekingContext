@@ -1,0 +1,65 @@
+{
+  "id": "seeking-context",
+  "name": "SeekingContext Memory",
+  "description": "Universal agent memory with hybrid vector + keyword search, three-tier context (L0/L1/L2), and cross-framework namespace isolation.",
+  "kind": "memory",
+  "uiHints": {
+    "apiUrl": {
+      "label": "Server URL",
+      "placeholder": "http://127.0.0.1:9377",
+      "help": "SeekingContext REST API URL. Start with: uv run seeking-context-api"
+    },
+    "namespace": {
+      "label": "Namespace",
+      "placeholder": "openclaw",
+      "help": "Framework namespace for cross-agent isolation"
+    },
+    "autoCapture": {
+      "label": "Auto-Capture",
+      "help": "Automatically capture important information after each agent turn"
+    },
+    "autoRecall": {
+      "label": "Auto-Recall",
+      "help": "Automatically inject relevant memories before each agent turn"
+    },
+    "topK": {
+      "label": "Top K Results",
+      "placeholder": "5",
+      "help": "Maximum memories to retrieve per search",
+      "advanced": true
+    },
+    "captureMaxChars": {
+      "label": "Capture Max Chars",
+      "placeholder": "500",
+      "help": "Maximum message length eligible for auto-capture",
+      "advanced": true
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "apiUrl": {
+        "type": "string"
+      },
+      "namespace": {
+        "type": "string"
+      },
+      "autoCapture": {
+        "type": "boolean"
+      },
+      "autoRecall": {
+        "type": "boolean"
+      },
+      "topK": {
+        "type": "number"
+      },
+      "captureMaxChars": {
+        "type": "number",
+        "minimum": 100,
+        "maximum": 10000
+      }
+    },
+    "required": []
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "seeking-context",
+  "version": "0.1.0",
+  "description": "Persistent local memory for Claude Code. Auto-loads relevant memories on session start, auto-saves on stop, with on-demand store/recall skills via SeekingContext REST API.",
+  "author": {
+    "name": "finny"
+  },
+  "repository": "https://github.com/seeking-context/seeking-context",
+  "license": "Apache-2.0",
+  "hooks": "./hooks/hooks.json"
+}
